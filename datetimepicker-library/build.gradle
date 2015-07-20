@@ -6,7 +6,7 @@ repositories {
 
 dependencies {
     compile project(':skimble-core-android:nine-old-androids:library')
-    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.android.support:support-v4:22.2.1'
 }
 
 android {
