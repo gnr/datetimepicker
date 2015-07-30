@@ -1,5 +1,6 @@
 package com.fourmob.datetimepicker.date;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -19,7 +20,6 @@ import android.widget.TextView;
 
 import com.fourmob.datetimepicker.R;
 import com.fourmob.datetimepicker.Utils;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
@@ -235,7 +235,8 @@ public class DatePickerDialog extends DialogFragment implements View.OnClickList
 			setCurrentView(MONTH_AND_DAY_VIEW);
 	}
 
-	public void onCreate(Bundle bundle) {
+	@SuppressWarnings("ResourceType")
+    public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		Activity activity = getActivity();
 		activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
