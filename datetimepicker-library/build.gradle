@@ -6,16 +6,16 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:26.0.0'
+    compile 'com.android.support:support-v4:27.0.0'
 }
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdkVersion 15
+        targetSdkVersion 25
         versionName project.VERSION_NAME
         versionCode Integer.parseInt(project.VERSION_CODE)
     }
@@ -31,6 +31,12 @@ android {
             assets.srcDirs = ['assets']
         }
 	}
+
+    buildTypes {
+        debug {}
+        debugProguard {}
+        release {}
+    }
 }
 
 apply from: 'gradle-mvn-push.gradle'
